@@ -1,0 +1,7 @@
+python poseModel.py -i exercise_data/data5.csv -o model.h5
+python poseModel.py -i exercise_data/data10.csv -o model.h5
+
+
+python inference.py --model model.h5 --conf 0.75 --source test-img/push-up-1.jpg
+python inference.py --model model.h5 --conf 0.75 --source 0
+python inference.py --model model.h5 --conf 0.75 --source test-video/push-up.mp4
